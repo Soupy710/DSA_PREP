@@ -1,3 +1,9 @@
+//Solution 1: maintain two arrays 1. with the largest bar on the left for all elements 2. largest bar on the right
+//Solution 2: stacks(shown below)
+//Solution 3: two pointer approach(most efficient): Say we have indices i, j and a boundary of (left, right). where i is the left pointer and j is the right pointer.
+//If the minimum is arr[left], we can say that i is bounded in one side by left and no matter whatever the values are in between (i, right), the rightmost boundary of i will at  least have height arr[right] which is the probable outermost boundary for i. 
+//So the water height of water column at index i is arr[left] – arr[i] and we can increment i then.
+//Similar things happen for j also.
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long int
